@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="stylesheet" href="./css/modules.css">
+    <title>JS Games</title>
+</head>
+<body ng-app="app" ng-controller="indexController" ng-keypress="console.log($event)">
+    <nav class="nav-bar" >
+        <img class="logo" src="./images/logo.png" alt="Logo">
+        <div class="links" id="links" >
+            <ul >
+                <li><a href="/" ng-class="{ active: location=='/' }" onclick=" hide()" class="">Home</a></li>
+                <li><a href="#/about" ng-class="{ active: location=='/about'}"onclick=" hide()" class=""  >About</a></li>
+                <li><a href="#/jsactivities" ng-class="{ active: location=='/jsactivities'}" onclick=" hide()" >JS Activity</a></li>
+                <li><a href="#/downloads" ng-class="{ active: location=='/downloads'}" onclick=" hide()" >Downloads</a></li>
+            </ul>
+            <div class="cross">
+                <img src="" alt="">
+            </div>
+        </div>
+        <burger id="burger">
+            <ln></ln>
+            <ln></ln>
+            <ln></ln>
+        </burger>
+    </nav>
+    <div class="container">
+        <!--angular views-->
+        
+        <ng-view></ng-view>
+    </div>
+    <!--Anguar dependencies-->
+    <script src="./scripts/angular-1.8.2/angular.js"></script>
+    <script src="./scripts/JQuery3.6.0.js"></script>
+    <script src="./scripts/master.js"></script>
+    
+    <script src="./scripts/angular-1.8.2/angular-route.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/controllers/home.js"></script>
+    <script src="./app/controllers/about.js"></script>
+    <script src="./app/controllers/jsactivities.js"></script>
+    <script src="./app/controllers/downloads.js"></script>
+
+    
+    
+    <!--JQuery dependencies-->
+    
+</body>
+</html>

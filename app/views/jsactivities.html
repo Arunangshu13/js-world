@@ -1,0 +1,78 @@
+<div class="activities" >
+    <h1>{{message}}</h1>    
+    <span class="band">
+        <h2>Tick Tock</h2>
+    </span>
+    <div class="activity">
+        <div class="n1-block" id="clk">
+            <!-- <img class="clockImage"src="../images/clock.png" alt="clkimg" > -->
+            <div class="hr-hand" id="hr"></div>
+            <div class="min-hand" id="min"></div>
+            <div class="sec-hand" id="sec"></div>
+        </div>
+    </div> 
+    <span class="band">
+        <h2>Match the blocks</h2>
+    </span>
+    <div class="activity" >
+        <div class="game-container" >
+            <div class="sub-container" >
+                <div class="game">
+                    <span class="score">
+                        <span style="width: 350px; display:flex; padding: 10px;"><h1>Score : </h1> <h1 id ="score"> 0 </h1></span>
+                        <span style="width: 400px; display:flex; padding: 10px;"><h1>Failure : </h1><h1 id="failed"> 0 </h1></span>
+                    </span>
+                    <div class="grid" id="board">
+                    </div>
+                </div>
+                <div class="comments">
+                    <h2>Status</h2>
+                    <h1 id="comments"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="band">
+        <h2>Find the image</h2>
+    </span>
+    <div class="activity">
+        <div class="game-container" id="special">
+            <div class="sub-container">
+                <div class="board-b" id="boardb">
+                </div>    
+                <fun>
+                    <h1>Game Information</h1>
+                    <ul>
+                       <li>Note: two clicks on the board is considered as one move</li> 
+                       <li>Only swap between immediate neighbours are allowed </li> 
+                       <li>When the imae is formed successfully all stats will be reset.</li> 
+                    </ul>
+                    <h2 id="gmove"></h2>
+                </fun>
+            </div>
+        </div>
+    </div>
+    <span class="band">
+        <h2>Whackaboom !</h2>
+    </span>
+    <div class="activity">
+        <div class="game-container">
+            <div class="sub-container" >
+                <div class="gboard" id="gboard"onload="creategBoard()"></div>
+                <div class="gscore">
+                    <button id="startWhacking"> Start Game</button>
+                    <button id="stopWhacking" > Stop Game </button>
+                    <h1>Score Board</h1>
+                    <span>
+                        <h2>Hits : </h2>
+                        <h2 id="ghits">0</h2>
+                    </span>
+                    <span>
+                        <h3>Scores : </h3>
+                        <h3 id="sc">0</h3>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
