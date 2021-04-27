@@ -1,6 +1,6 @@
 app.controller("homeController", function($scope){
 
-    var data=["experiencing java script implementation.", "learning to create dynamic web pages.", "finding good css effect for your websites.", "many other things!"];
+    var data=["experiencing java script implementation.", "building awesome mini application in js.", "finding cool css effects for your website.", "a lot other stuff!"];
     var type=document.getElementById("type");
     var currentText="";
     var letters="";

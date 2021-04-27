@@ -20,11 +20,16 @@
     display: flex;
     width: 100%;
     overflow: hidden;
-    flex-direction:column;
+    width:100%;
     padding:10% 5% 0% 5%;
     height: 90vh;
     background: transparent;
     align-items: flex-start;
+ }
+ .main{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
  }
  .jslogo{
      margin: 5%;
@@ -34,6 +39,7 @@
  }
 .type{
     padding: 10px;
+    font-size: 25px;
     color: black;
 }
 .type::after{
@@ -50,7 +56,47 @@
 .github{
     color:teal;
 }
- .about{
+#sg{
+    height: 100%;width:100%;
+}
+.gear{
+    display: flex;
+    justify-content:flex-end;
+}
+.gear1{
+    
+    width:20%;
+    height:20%;
+    animation: rotate-a 3s infinite linear;
+}
+.gear2{
+    width:25%;
+    height:25%;
+    animation: rotate-b 3s infinite linear;
+}
+ #gear1{
+    animation: rotate-a 2s infinite;
+}
+/*#gear2{
+    animation: rotate-b 2s infinite;
+} */
+@keyframes rotate-a{
+    from {
+        transform: rotate(15deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+@keyframes rotate-b{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-359deg);
+    }
+}
+.about{
      display: flex;
      position: relative;
      align-items: center;
@@ -211,7 +257,19 @@
 
 
 @media only screen and (max-width: 1025px){
-    
+    .home{
+        flex-direction: column;
+    }    
+    #type{
+        font-size: 20px;
+    }
+    .main{
+        height: 45vh;
+        width: 100%;
+    }
+    .main h1{
+        font-size:25px;
+    }
     .logo{
         position: absolute;
         height: 65px;
@@ -219,6 +277,14 @@
         top:10px;
         z-index: 1;
         left:10px;
+    }
+    #sg{
+        width: 90%; height:90%;
+    }
+    .gear{
+        width: 100%;
+    height: auto;
+    justify-content: center;
     }
     .nav-bar{
         box-shadow: none;
@@ -266,7 +332,17 @@
 
  .about ul li {
     font-size: 15px;
-}
+    }
+    .gear2 {
+        width: 29%;
+        height: 78%;
+        animation: rotate-b 3s infinite linear;
+    }
+    .gear1 {
+        width: 36%;
+        height: 100%;
+        animation: rotate-a 3s infinite linear;
+    }
 }
 
 
